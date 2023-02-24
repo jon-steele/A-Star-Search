@@ -1,5 +1,6 @@
 from a_star import path_finder
 from path import Path
+from functions import number_to_city
 
 print("""
       
@@ -26,4 +27,4 @@ goal = int(input("Input an goal node (0 - 12): "))
 path = path_finder(start, goal)
 
 for x in path.visited_nodes:
-    print(x)
+    print(number_to_city(x))
