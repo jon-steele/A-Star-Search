@@ -47,14 +47,15 @@ def path_finder(start, goal):
                     best_path = p
                     best_next = x
                     best_value = a_function
-                    if x == goal:
-                        goal_reached = 1
-                    
-            
+
         # Once we have considered all possible moves, we traverse the best one, and add the path to our frontier
         newpath = copy.deepcopy(best_path)
         newpath.move(best_next, cost(best_path.visited_nodes[-1], best_next))
         frontier.append(newpath)
+        
+        if best_next == goal:
+            goal_reached = 1
+            return newpath
         
     result = copy.deepcopy(frontier[-1])
     for x in result.visited_nodes:
