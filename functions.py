@@ -35,7 +35,7 @@ def heuristic(a, b):
         [121.8, 118, 128.7, 111.9, 125, 104.1, 108.3, 121, 93.4, 74.1, 44.7, 0, 50], # Hope
         [62.8, 60, 71.9, 50.9, 62.1, 41.17, 45.8, 56.6, 28.1, 11.8, 23.6, 50, 0] # Mission
     ]
-    return straight_line_distance[a, b]
+    return straight_line_distance[a][b]
 
 # number_to_city converts an integer to a city name, as cities are stored as indices
 def number_to_city(x):

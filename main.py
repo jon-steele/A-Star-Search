@@ -1,5 +1,3 @@
-from functions import cost
-from functions import heuristic
-from functions import number_to_city
+from a_star import path_finder
 
-print(cost(0,9))
+print(path_finder(6,11))
